@@ -21,8 +21,6 @@ concurrency:
 jobs:
   build:
     runs-on: "ubuntu-22.04"
-    needs:
-      - setup-environment
     steps:
       - name: Checkout
         uses: actions/checkout@v3
