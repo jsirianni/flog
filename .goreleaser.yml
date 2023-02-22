@@ -38,6 +38,7 @@ dockers:
     dockerfile: ./Dockerfile
     use: buildx
     build_flag_templates:
+      - "--label=org.opencontainers.image.source https://github.com/jsirianni/flog"
       - "--label=created={{.Date}}"
       - "--label=title={{.ProjectName}}"
       - "--label=revision={{.FullCommit}}"
@@ -53,6 +54,7 @@ dockers:
     dockerfile: ./Dockerfile
     use: buildx
     build_flag_templates:
+      - "--label=org.opencontainers.image.source https://github.com/jsirianni/flog"
       - "--label=created={{.Date}}"
       - "--label=title={{.ProjectName}}"
       - "--label=revision={{.FullCommit}}"
